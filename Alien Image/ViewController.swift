@@ -26,6 +26,8 @@ class ViewController: UIViewController {
 
     @IBAction func update(_ sender: Any) {
         
+        // 첫 번째 방법 -- boolean
+        
         if index == 5 {
             direction = false
         } else if index == 1 {
@@ -37,6 +39,21 @@ class ViewController: UIViewController {
         } else if direction == false {
             index = index - 1
         }
+        
+        // 두 번째 방법 -- 방향
+/*
+        if index == 1{
+            direction = true
+        } else if index <= 5 {
+            direction = false
+        }
+        if direction == true {
+            index = index + 1
+        } else {
+            index = index - 1
+        }
+ */
+        
         
         myImageView.image = UIImage(named:"frame\(index).png")
         count.text = String(index)
